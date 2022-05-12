@@ -16,25 +16,25 @@ EXTRA_OECONF += " \
     ${@bb.utils.contains('TUNE_FEATURES', 'aarch64', '--enable-armv8', ' ', d)} \
 "
 
-RDEPENDS:${PN} += " imx-dsp-codec-ext"
+RDEPENDS_${PN} += " imx-dsp-codec-ext"
 
 HIFI4_BIN ?= "hifi4_imx8qmqxp.bin"
-HIFI4_BIN:mx8mp = "hifi4_imx8mp.bin"
-HIFI4_BIN:mx8ulp = "hifi4_imx8ulp.bin"
+HIFI4_BIN_mx8mp = "hifi4_imx8mp.bin"
+HIFI4_BIN_mx8ulp = "hifi4_imx8ulp.bin"
 
-do_install:append () {
+do_install_append () {
     # Rename DSP Firmware into hifi4.bin and remove unneeded binary
     mv ${D}/lib/firmware/imx/dsp/${HIFI4_BIN} ${D}/lib/firmware/imx/dsp/hifi4.bin
     find ${D}/lib/firmware/imx/dsp -name hifi4_*.bin -exec rm {} \;
 }
 
-FILES:${PN} = "${libdir}/imx-mm/audio-codec/dsp \
+FILES_${PN} = "${libdir}/imx-mm/audio-codec/dsp \
                ${libdir}/imx-mm/audio-codec/wrap \
                ${base_libdir}/firmware/imx/dsp \
                /unit_tests \
 "
 
-INSANE_SKIP:${PN} = "already-stripped arch ldflags dev-so"
+INSANE_SKIP_${PN} = "already-stripped arch ldflags dev-so"
 
 # Fix strip command failed: 'Unable to recognise the format of the input file'
 INHIBIT_PACKAGE_STRIP = "1"
