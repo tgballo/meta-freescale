@@ -8,7 +8,7 @@ DEPENDS = "optee-client-qoriq optee-os-qoriq python3-pycryptodome-native python3
 
 inherit python3native
 
-SRC_URI = "git://github.com/OP-TEE/optee_test;nobranch=1"
+SRC_URI = "git://github.com/OP-TEE/optee_test;nobranch=1;protocol=https"
 SRCREV = "30481e381cb4285706e7516853495a7699c93b2c"
 
 S = "${WORKDIR}/git"

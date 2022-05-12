@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://Licenses/README;md5=5a7450c57ffe5ae63fd732446b988025"
 
 DEPENDS += "bison-native"
 
-SRC_URI = "git://github.com/Freescale/u-boot-fslc.git;branch=${SRCBRANCH}"
+SRC_URI = "git://github.com/Freescale/u-boot-fslc.git;branch=${SRCBRANCH};protocol=https"
 
 SRCREV = "80c23498b425447a4a04d2a85ca4c2aec6ec349a"
 SRCBRANCH = "2020.10+fslc"
