@@ -18,7 +18,7 @@ PV = "7.0+${SRCPV}"
 
 SRCBRANCH = "imx_5.4.70_2.3.0"
 SRC_URI = " \
-    git://source.codeaurora.org/external/imx/imx-test.git;protocol=https;branch=${SRCBRANCH} \
+    git://github.com/nxp-imx/imx-test.git;protocol=https;branch=${SRCBRANCH} \
     file://memtool_profile \
 "
 SRCREV = "90fd7168fe5f15de9b2b1992a719024fc73a185a"

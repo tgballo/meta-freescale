@@ -9,7 +9,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0-only;md5=801f80980d171d
 
 SRCBRANCH = "imx_5.4.70_2.3.0"
 LOCALVERSION = "-imx_5.4.70_2.3.2"
-KERNEL_SRC ?= "git://source.codeaurora.org/external/imx/linux-imx.git;protocol=https;branch=master"
+KERNEL_SRC ?= "git://github.com/nxp-imx/linux-imx.git;protocol=https;branch=master"
 SRC_URI = " \
     ${KERNEL_SRC};branch=${SRCBRANCH};subpath=drivers/mxc/gpu-viv;destsuffix=git/src \
     file://Add-makefile.patch \
